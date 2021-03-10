@@ -29,6 +29,7 @@ namespace Project_VP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelBorderBackgroundUp = new System.Windows.Forms.Panel();
             this.panelBackgroundUp = new System.Windows.Forms.Panel();
             this.panelBorderCatUp = new System.Windows.Forms.Panel();
@@ -45,6 +46,22 @@ namespace Project_VP
             this.panelBackgroundRight = new System.Windows.Forms.Panel();
             this.panelBorderCatRight = new System.Windows.Forms.Panel();
             this.pictureCatRight = new System.Windows.Forms.PictureBox();
+            this.labelSatiety = new System.Windows.Forms.Label();
+            this.progressBarSatiety = new System.Windows.Forms.ProgressBar();
+            this.progressBarSatietyLack = new System.Windows.Forms.ProgressBar();
+            this.progressBarSatietyExcess = new System.Windows.Forms.ProgressBar();
+            this.labelHydration = new System.Windows.Forms.Label();
+            this.progressBarHydration = new System.Windows.Forms.ProgressBar();
+            this.progressBarHydrationLack = new System.Windows.Forms.ProgressBar();
+            this.progressBarHydrationExcess = new System.Windows.Forms.ProgressBar();
+            this.progressBarEnduranceLack = new System.Windows.Forms.ProgressBar();
+            this.progressBarEndurance = new System.Windows.Forms.ProgressBar();
+            this.labelEndurance = new System.Windows.Forms.Label();
+            this.table = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonMeat = new System.Windows.Forms.Button();
+            this.buttonWater = new System.Windows.Forms.Button();
+            this.buttonSleep = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panelBorderBackgroundUp.SuspendLayout();
             this.panelBackgroundUp.SuspendLayout();
             this.panelBorderCatUp.SuspendLayout();
@@ -211,17 +228,218 @@ namespace Project_VP
             this.pictureCatRight.TabIndex = 0;
             this.pictureCatRight.TabStop = false;
             // 
+            // labelSatiety
+            // 
+            this.labelSatiety.AutoSize = true;
+            this.labelSatiety.Font = new System.Drawing.Font("Segoe Script", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSatiety.Location = new System.Drawing.Point(12, 356);
+            this.labelSatiety.Name = "labelSatiety";
+            this.labelSatiety.Size = new System.Drawing.Size(100, 34);
+            this.labelSatiety.TabIndex = 4;
+            this.labelSatiety.Text = "Satiety:";
+            // 
+            // progressBarSatiety
+            // 
+            this.progressBarSatiety.Location = new System.Drawing.Point(164, 356);
+            this.progressBarSatiety.MarqueeAnimationSpeed = 500;
+            this.progressBarSatiety.Maximum = 16;
+            this.progressBarSatiety.Name = "progressBarSatiety";
+            this.progressBarSatiety.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.progressBarSatiety.Size = new System.Drawing.Size(512, 32);
+            this.progressBarSatiety.Step = 1;
+            this.progressBarSatiety.TabIndex = 6;
+            this.progressBarSatiety.Value = 12;
+            // 
+            // progressBarSatietyLack
+            // 
+            this.progressBarSatietyLack.Location = new System.Drawing.Point(164, 356);
+            this.progressBarSatietyLack.Margin = new System.Windows.Forms.Padding(0);
+            this.progressBarSatietyLack.MarqueeAnimationSpeed = 500;
+            this.progressBarSatietyLack.Maximum = 4;
+            this.progressBarSatietyLack.Name = "progressBarSatietyLack";
+            this.progressBarSatietyLack.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.progressBarSatietyLack.RightToLeftLayout = true;
+            this.progressBarSatietyLack.Size = new System.Drawing.Size(128, 32);
+            this.progressBarSatietyLack.Step = 1;
+            this.progressBarSatietyLack.TabIndex = 7;
+            // 
+            // progressBarSatietyExcess
+            // 
+            this.progressBarSatietyExcess.Location = new System.Drawing.Point(547, 356);
+            this.progressBarSatietyExcess.MarqueeAnimationSpeed = 500;
+            this.progressBarSatietyExcess.Maximum = 4;
+            this.progressBarSatietyExcess.Name = "progressBarSatietyExcess";
+            this.progressBarSatietyExcess.Size = new System.Drawing.Size(129, 32);
+            this.progressBarSatietyExcess.Step = 1;
+            this.progressBarSatietyExcess.TabIndex = 8;
+            // 
+            // labelHydration
+            // 
+            this.labelHydration.AutoSize = true;
+            this.labelHydration.Font = new System.Drawing.Font("Segoe Script", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHydration.Location = new System.Drawing.Point(12, 394);
+            this.labelHydration.Name = "labelHydration";
+            this.labelHydration.Size = new System.Drawing.Size(137, 34);
+            this.labelHydration.TabIndex = 9;
+            this.labelHydration.Text = "Hydration:";
+            // 
+            // progressBarHydration
+            // 
+            this.progressBarHydration.Location = new System.Drawing.Point(164, 394);
+            this.progressBarHydration.MarqueeAnimationSpeed = 500;
+            this.progressBarHydration.Maximum = 16;
+            this.progressBarHydration.Name = "progressBarHydration";
+            this.progressBarHydration.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.progressBarHydration.Size = new System.Drawing.Size(512, 32);
+            this.progressBarHydration.Step = 1;
+            this.progressBarHydration.TabIndex = 10;
+            this.progressBarHydration.Value = 12;
+            // 
+            // progressBarHydrationLack
+            // 
+            this.progressBarHydrationLack.Location = new System.Drawing.Point(164, 394);
+            this.progressBarHydrationLack.Margin = new System.Windows.Forms.Padding(0);
+            this.progressBarHydrationLack.MarqueeAnimationSpeed = 500;
+            this.progressBarHydrationLack.Maximum = 4;
+            this.progressBarHydrationLack.Name = "progressBarHydrationLack";
+            this.progressBarHydrationLack.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.progressBarHydrationLack.RightToLeftLayout = true;
+            this.progressBarHydrationLack.Size = new System.Drawing.Size(128, 32);
+            this.progressBarHydrationLack.Step = 1;
+            this.progressBarHydrationLack.TabIndex = 11;
+            // 
+            // progressBarHydrationExcess
+            // 
+            this.progressBarHydrationExcess.Location = new System.Drawing.Point(547, 394);
+            this.progressBarHydrationExcess.MarqueeAnimationSpeed = 500;
+            this.progressBarHydrationExcess.Maximum = 4;
+            this.progressBarHydrationExcess.Name = "progressBarHydrationExcess";
+            this.progressBarHydrationExcess.Size = new System.Drawing.Size(129, 32);
+            this.progressBarHydrationExcess.Step = 1;
+            this.progressBarHydrationExcess.TabIndex = 12;
+            // 
+            // progressBarEnduranceLack
+            // 
+            this.progressBarEnduranceLack.Location = new System.Drawing.Point(164, 432);
+            this.progressBarEnduranceLack.Margin = new System.Windows.Forms.Padding(0);
+            this.progressBarEnduranceLack.MarqueeAnimationSpeed = 500;
+            this.progressBarEnduranceLack.Maximum = 4;
+            this.progressBarEnduranceLack.Name = "progressBarEnduranceLack";
+            this.progressBarEnduranceLack.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.progressBarEnduranceLack.RightToLeftLayout = true;
+            this.progressBarEnduranceLack.Size = new System.Drawing.Size(128, 32);
+            this.progressBarEnduranceLack.Step = 1;
+            this.progressBarEnduranceLack.TabIndex = 31;
+            // 
+            // progressBarEndurance
+            // 
+            this.progressBarEndurance.Location = new System.Drawing.Point(164, 432);
+            this.progressBarEndurance.MarqueeAnimationSpeed = 500;
+            this.progressBarEndurance.Maximum = 16;
+            this.progressBarEndurance.Name = "progressBarEndurance";
+            this.progressBarEndurance.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.progressBarEndurance.Size = new System.Drawing.Size(512, 32);
+            this.progressBarEndurance.Step = 1;
+            this.progressBarEndurance.TabIndex = 30;
+            this.progressBarEndurance.Value = 16;
+            // 
+            // labelEndurance
+            // 
+            this.labelEndurance.AutoSize = true;
+            this.labelEndurance.Font = new System.Drawing.Font("Segoe Script", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEndurance.Location = new System.Drawing.Point(12, 432);
+            this.labelEndurance.Name = "labelEndurance";
+            this.labelEndurance.Size = new System.Drawing.Size(145, 34);
+            this.labelEndurance.TabIndex = 29;
+            this.labelEndurance.Text = "Endurance:";
+            // 
+            // table
+            // 
+            this.table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.table.ColumnCount = 9;
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.table.Location = new System.Drawing.Point(344, 12);
+            this.table.Name = "table";
+            this.table.RowCount = 6;
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.table.Size = new System.Drawing.Size(444, 326);
+            this.table.TabIndex = 33;
+            // 
+            // buttonMeat
+            // 
+            this.buttonMeat.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMeat.Location = new System.Drawing.Point(682, 356);
+            this.buttonMeat.Name = "buttonMeat";
+            this.buttonMeat.Size = new System.Drawing.Size(106, 32);
+            this.buttonMeat.TabIndex = 34;
+            this.buttonMeat.Text = " Meat";
+            this.buttonMeat.UseVisualStyleBackColor = true;
+            // 
+            // buttonWater
+            // 
+            this.buttonWater.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonWater.Location = new System.Drawing.Point(682, 394);
+            this.buttonWater.Name = "buttonWater";
+            this.buttonWater.Size = new System.Drawing.Size(106, 32);
+            this.buttonWater.TabIndex = 35;
+            this.buttonWater.Text = "Water";
+            this.buttonWater.UseVisualStyleBackColor = true;
+            // 
+            // buttonSleep
+            // 
+            this.buttonSleep.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSleep.Location = new System.Drawing.Point(682, 432);
+            this.buttonSleep.Name = "buttonSleep";
+            this.buttonSleep.Size = new System.Drawing.Size(106, 32);
+            this.buttonSleep.TabIndex = 36;
+            this.buttonSleep.Text = "Sleep";
+            this.buttonSleep.UseVisualStyleBackColor = true;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 500;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 477);
+            this.Controls.Add(this.buttonSleep);
+            this.Controls.Add(this.buttonWater);
+            this.Controls.Add(this.buttonMeat);
+            this.Controls.Add(this.table);
+            this.Controls.Add(this.progressBarEnduranceLack);
+            this.Controls.Add(this.progressBarEndurance);
+            this.Controls.Add(this.labelEndurance);
+            this.Controls.Add(this.progressBarHydrationExcess);
+            this.Controls.Add(this.progressBarHydrationLack);
+            this.Controls.Add(this.progressBarHydration);
+            this.Controls.Add(this.labelHydration);
+            this.Controls.Add(this.progressBarSatietyExcess);
+            this.Controls.Add(this.progressBarSatietyLack);
+            this.Controls.Add(this.progressBarSatiety);
+            this.Controls.Add(this.labelSatiety);
             this.Controls.Add(this.panelBorderBackgroundRight);
             this.Controls.Add(this.panelBorderBackgroundLeft);
             this.Controls.Add(this.panelBorderBackgroundDown);
             this.Controls.Add(this.panelBorderBackgroundUp);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "My Cat\'s Life";
             this.panelBorderBackgroundUp.ResumeLayout(false);
             this.panelBackgroundUp.ResumeLayout(false);
             this.panelBorderCatUp.ResumeLayout(false);
@@ -243,6 +461,7 @@ namespace Project_VP
             this.panelBorderCatRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatRight)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -267,6 +486,27 @@ namespace Project_VP
         private System.Windows.Forms.Panel panelBackgroundRight;
         private System.Windows.Forms.Panel panelBorderCatRight;
         private System.Windows.Forms.PictureBox pictureCatRight;
+
+        private System.Windows.Forms.Label labelSatiety;
+
+        private System.Windows.Forms.ProgressBar progressBarSatiety;
+        private System.Windows.Forms.ProgressBar progressBarSatietyLack;
+        private System.Windows.Forms.ProgressBar progressBarSatietyExcess;
+
+        private System.Windows.Forms.Label labelHydration;
+
+        private System.Windows.Forms.ProgressBar progressBarHydration;
+        private System.Windows.Forms.ProgressBar progressBarHydrationLack;
+        private System.Windows.Forms.ProgressBar progressBarHydrationExcess;
+
+        private System.Windows.Forms.Label labelEndurance;
+        private System.Windows.Forms.ProgressBar progressBarEnduranceLack;
+        private System.Windows.Forms.ProgressBar progressBarEndurance;
+        private System.Windows.Forms.TableLayoutPanel table;
+        private System.Windows.Forms.Button buttonMeat;
+        private System.Windows.Forms.Button buttonWater;
+        private System.Windows.Forms.Button buttonSleep;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
