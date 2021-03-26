@@ -88,6 +88,10 @@
     <None Include="resources\cat.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\water.png" />
+    <None Include="resources\bawls.png" />
+    <None Include="resources\empty.png" />
+    <None Include="resources\meat.png" />
     <Content Include="resources\roomDown.png" />
     <Content Include="resources\roomLeft.png" />
     <Content Include="resources\roomRight.png" />
