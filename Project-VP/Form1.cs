@@ -23,21 +23,18 @@ namespace Project_VP
     {
         private struct TableLocation
         {
-            public TableLocation(int pos_x, int pos_y, int steps)
+            public TableLocation(int column, int row, int steps)
             {
-                x = pos_x;
-                y = pos_y;
+                cellPosition = new TableLayoutPanelCellPosition(column, row);
                 stepsToDisappear = steps;
             }
 
-            int x;
-            int y;
-
-            int stepsToDisappear;
+            public TableLayoutPanelCellPosition cellPosition;
+            public int stepsToDisappear;
         }
 
         private TableLocation locationCat;
-        private List<TableLocation> locationToGo;
+        private TableLocation locationToGo;
 
         private List<TableLocation> locationsEmptyBawls;
         private List<TableLocation> locationsMeatBawls;
@@ -56,15 +53,53 @@ namespace Project_VP
             progressBarHydrationExcess.SetState((int)ProgressBarColors.Yellow);
 
             progressBarEnduranceLack.SetState((int)ProgressBarColors.Red);
-            progressBarEndurance.SetState((int)ProgressBarColors.Green);  
+            progressBarEndurance.SetState((int)ProgressBarColors.Green);
 
             locationCat = new TableLocation(4, 0, 0);
-            locationToGo.Add(new TableLocation(4, 2, 0));
+            locationToGo = new TableLocation(5, 3, 0);
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            if (locationCat.cellPosition.Column != locationToGo.cellPosition.Column)
+            {
+                if (locationToGo.cellPosition.Column - locationCat.cellPosition.Column > 0)
+                {
+                    locationCat.cellPosition.Column++;
 
+                    panelBackgroundUp.Location = new Point(panelBackgroundUp.Location.X - 32, panelBackgroundUp.Location.Y);
+                    panelBorderCatUp.Location = new Point(panelBorderCatUp.Location.X + 32, panelBorderCatUp.Location.Y);
+                }
+                else
+                {
+                    locationCat.cellPosition.Column--;
+
+                    panelBackgroundUp.Location = new Point(panelBackgroundUp.Location.X + 32, panelBackgroundUp.Location.Y);
+                    panelBorderCatUp.Location = new Point(panelBorderCatUp.Location.X - 32, panelBorderCatUp.Location.Y);
+                }
+            }
+
+            if (locationCat.cellPosition.Row != locationToGo.cellPosition.Row)
+            {
+                if (locationToGo.cellPosition.Row - locationCat.cellPosition.Row > 0)
+                {
+                    locationCat.cellPosition.Row++;
+
+                    // panelBackgroundUp.Location.Offset(0, -32);
+                    // panelBorderCatUp.Location.Offset(0, 32); // doesn't work
+                    panelBackgroundUp.Location = new Point(panelBackgroundUp.Location.X, panelBackgroundUp.Location.Y - 32);
+                    panelBorderCatUp.Location = new Point(panelBorderCatUp.Location.X, panelBorderCatUp.Location.Y + 32);
+                }
+                else
+                {
+                    locationCat.cellPosition.Row--;
+
+                    panelBackgroundUp.Location = new Point(panelBackgroundUp.Location.X, panelBackgroundUp.Location.Y + 32);
+                    panelBorderCatUp.Location = new Point(panelBorderCatUp.Location.X, panelBorderCatUp.Location.Y - 32);
+                }
+            }
+
+            table.SetCellPosition(pictureTableCat, locationCat.cellPosition);
         }
 
         private void buttonGameState_Click(object sender, EventArgs e)
