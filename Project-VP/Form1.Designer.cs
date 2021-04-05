@@ -54,15 +54,23 @@ namespace Project_VP
             this.progressBarHydrationLack = new System.Windows.Forms.ProgressBar();
             this.progressBarHydrationExcess = new System.Windows.Forms.ProgressBar();
             this.table = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureTableWater = new System.Windows.Forms.PictureBox();
-            this.pictureTableMeat = new System.Windows.Forms.PictureBox();
             this.pictureTableCat = new System.Windows.Forms.PictureBox();
+            this.pictureTableMeat = new System.Windows.Forms.PictureBox();
+            this.pictureTableWater = new System.Windows.Forms.PictureBox();
             this.buttonMeat = new System.Windows.Forms.Button();
             this.buttonWater = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.progressBarHydration = new System.Windows.Forms.ProgressBar();
             this.buttonGameState = new System.Windows.Forms.Button();
             this.progressBarSatiety = new System.Windows.Forms.ProgressBar();
+            this.panelBawlsUp = new System.Windows.Forms.Panel();
+            this.pictureBawlsUp = new System.Windows.Forms.PictureBox();
+            this.panelBawlsDown = new System.Windows.Forms.Panel();
+            this.pictureBawlsDown = new System.Windows.Forms.PictureBox();
+            this.panelBawlsLeft = new System.Windows.Forms.Panel();
+            this.pictureBawlsLeft = new System.Windows.Forms.PictureBox();
+            this.panelBawlsRight = new System.Windows.Forms.Panel();
+            this.pictureBawlsRight = new System.Windows.Forms.PictureBox();
             this.panelBorderBackgroundUp.SuspendLayout();
             this.panelBackgroundUp.SuspendLayout();
             this.panelBorderCatUp.SuspendLayout();
@@ -80,9 +88,17 @@ namespace Project_VP
             this.panelBorderCatRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatRight)).BeginInit();
             this.table.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureTableWater)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureTableMeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableCat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTableMeat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTableWater)).BeginInit();
+            this.panelBawlsUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsUp)).BeginInit();
+            this.panelBawlsDown.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsDown)).BeginInit();
+            this.panelBawlsLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsLeft)).BeginInit();
+            this.panelBawlsRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsRight)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBorderBackgroundUp
@@ -97,6 +113,7 @@ namespace Project_VP
             // 
             this.panelBackgroundUp.BackColor = System.Drawing.Color.Transparent;
             this.panelBackgroundUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelBackgroundUp.BackgroundImage")));
+            this.panelBackgroundUp.Controls.Add(this.panelBawlsUp);
             this.panelBackgroundUp.Controls.Add(this.panelBorderCatUp);
             this.panelBackgroundUp.Location = new System.Drawing.Point(-128, 0);
             this.panelBackgroundUp.Margin = new System.Windows.Forms.Padding(0);
@@ -134,6 +151,7 @@ namespace Project_VP
             // 
             this.panelBackgroundDown.BackColor = System.Drawing.Color.Transparent;
             this.panelBackgroundDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelBackgroundDown.BackgroundImage")));
+            this.panelBackgroundDown.Controls.Add(this.panelBawlsDown);
             this.panelBackgroundDown.Controls.Add(this.panelBorderCatDown);
             this.panelBackgroundDown.Location = new System.Drawing.Point(-128, -160);
             this.panelBackgroundDown.Margin = new System.Windows.Forms.Padding(0);
@@ -171,6 +189,7 @@ namespace Project_VP
             // 
             this.panelBackgroundLeft.BackColor = System.Drawing.Color.Transparent;
             this.panelBackgroundLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelBackgroundLeft.BackgroundImage")));
+            this.panelBackgroundLeft.Controls.Add(this.panelBawlsLeft);
             this.panelBackgroundLeft.Controls.Add(this.panelBorderCatLeft);
             this.panelBackgroundLeft.Location = new System.Drawing.Point(-160, -128);
             this.panelBackgroundLeft.Margin = new System.Windows.Forms.Padding(0);
@@ -208,6 +227,7 @@ namespace Project_VP
             // 
             this.panelBackgroundRight.BackColor = System.Drawing.Color.Transparent;
             this.panelBackgroundRight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelBackgroundRight.BackgroundImage")));
+            this.panelBackgroundRight.Controls.Add(this.panelBawlsRight);
             this.panelBackgroundRight.Controls.Add(this.panelBorderCatRight);
             this.panelBackgroundRight.Location = new System.Drawing.Point(0, -128);
             this.panelBackgroundRight.Margin = new System.Windows.Forms.Padding(0);
@@ -327,16 +347,15 @@ namespace Project_VP
             this.table.Size = new System.Drawing.Size(444, 326);
             this.table.TabIndex = 33;
             // 
-            // pictureTableWater
+            // pictureTableCat
             // 
-            this.pictureTableWater.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureTableWater.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureTableWater.BackgroundImage")));
-            this.pictureTableWater.Location = new System.Drawing.Point(58, 11);
-            this.pictureTableWater.Name = "pictureTableWater";
-            this.pictureTableWater.Size = new System.Drawing.Size(32, 32);
-            this.pictureTableWater.TabIndex = 3;
-            this.pictureTableWater.TabStop = false;
-            this.pictureTableWater.Visible = false;
+            this.pictureTableCat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureTableCat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureTableCat.BackgroundImage")));
+            this.pictureTableCat.Location = new System.Drawing.Point(205, 11);
+            this.pictureTableCat.Name = "pictureTableCat";
+            this.pictureTableCat.Size = new System.Drawing.Size(32, 32);
+            this.pictureTableCat.TabIndex = 0;
+            this.pictureTableCat.TabStop = false;
             // 
             // pictureTableMeat
             // 
@@ -349,15 +368,16 @@ namespace Project_VP
             this.pictureTableMeat.TabStop = false;
             this.pictureTableMeat.Visible = false;
             // 
-            // pictureTableCat
+            // pictureTableWater
             // 
-            this.pictureTableCat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureTableCat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureTableCat.BackgroundImage")));
-            this.pictureTableCat.Location = new System.Drawing.Point(205, 11);
-            this.pictureTableCat.Name = "pictureTableCat";
-            this.pictureTableCat.Size = new System.Drawing.Size(32, 32);
-            this.pictureTableCat.TabIndex = 0;
-            this.pictureTableCat.TabStop = false;
+            this.pictureTableWater.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureTableWater.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureTableWater.BackgroundImage")));
+            this.pictureTableWater.Location = new System.Drawing.Point(58, 11);
+            this.pictureTableWater.Name = "pictureTableWater";
+            this.pictureTableWater.Size = new System.Drawing.Size(32, 32);
+            this.pictureTableWater.TabIndex = 3;
+            this.pictureTableWater.TabStop = false;
+            this.pictureTableWater.Visible = false;
             // 
             // buttonMeat
             // 
@@ -423,6 +443,86 @@ namespace Project_VP
             this.progressBarSatiety.TabIndex = 37;
             this.progressBarSatiety.Value = 12;
             // 
+            // panelBawlsUp
+            // 
+            this.panelBawlsUp.BackColor = System.Drawing.Color.Transparent;
+            this.panelBawlsUp.Controls.Add(this.pictureBawlsUp);
+            this.panelBawlsUp.Location = new System.Drawing.Point(0, 0);
+            this.panelBawlsUp.Name = "panelBawlsUp";
+            this.panelBawlsUp.Size = new System.Drawing.Size(32, 32);
+            this.panelBawlsUp.TabIndex = 1;
+            this.panelBawlsUp.Visible = false;
+            // 
+            // pictureBawlsUp
+            // 
+            this.pictureBawlsUp.Image = global::Project_VP.Properties.Resources.bawls;
+            this.pictureBawlsUp.Location = new System.Drawing.Point(0, 0);
+            this.pictureBawlsUp.Name = "pictureBawlsUp";
+            this.pictureBawlsUp.Size = new System.Drawing.Size(96, 32);
+            this.pictureBawlsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBawlsUp.TabIndex = 0;
+            this.pictureBawlsUp.TabStop = false;
+            // 
+            // panelBawlsDown
+            // 
+            this.panelBawlsDown.BackColor = System.Drawing.Color.Transparent;
+            this.panelBawlsDown.Controls.Add(this.pictureBawlsDown);
+            this.panelBawlsDown.Location = new System.Drawing.Point(0, 0);
+            this.panelBawlsDown.Name = "panelBawlsDown";
+            this.panelBawlsDown.Size = new System.Drawing.Size(32, 32);
+            this.panelBawlsDown.TabIndex = 2;
+            this.panelBawlsDown.Visible = false;
+            // 
+            // pictureBawlsDown
+            // 
+            this.pictureBawlsDown.Image = global::Project_VP.Properties.Resources.bawls;
+            this.pictureBawlsDown.Location = new System.Drawing.Point(0, 0);
+            this.pictureBawlsDown.Name = "pictureBawlsDown";
+            this.pictureBawlsDown.Size = new System.Drawing.Size(96, 32);
+            this.pictureBawlsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBawlsDown.TabIndex = 0;
+            this.pictureBawlsDown.TabStop = false;
+            // 
+            // panelBawlsLeft
+            // 
+            this.panelBawlsLeft.BackColor = System.Drawing.Color.Transparent;
+            this.panelBawlsLeft.Controls.Add(this.pictureBawlsLeft);
+            this.panelBawlsLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelBawlsLeft.Name = "panelBawlsLeft";
+            this.panelBawlsLeft.Size = new System.Drawing.Size(32, 32);
+            this.panelBawlsLeft.TabIndex = 2;
+            this.panelBawlsLeft.Visible = false;
+            // 
+            // pictureBawlsLeft
+            // 
+            this.pictureBawlsLeft.Image = global::Project_VP.Properties.Resources.bawls;
+            this.pictureBawlsLeft.Location = new System.Drawing.Point(0, 0);
+            this.pictureBawlsLeft.Name = "pictureBawlsLeft";
+            this.pictureBawlsLeft.Size = new System.Drawing.Size(96, 32);
+            this.pictureBawlsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBawlsLeft.TabIndex = 0;
+            this.pictureBawlsLeft.TabStop = false;
+            // 
+            // panelBawlsRight
+            // 
+            this.panelBawlsRight.BackColor = System.Drawing.Color.Transparent;
+            this.panelBawlsRight.Controls.Add(this.pictureBawlsRight);
+            this.panelBawlsRight.Location = new System.Drawing.Point(0, 0);
+            this.panelBawlsRight.Name = "panelBawlsRight";
+            this.panelBawlsRight.Size = new System.Drawing.Size(32, 32);
+            this.panelBawlsRight.TabIndex = 2;
+            this.panelBawlsRight.Visible = false;
+            // 
+            // pictureBawlsRight
+            // 
+            this.pictureBawlsRight.Image = global::Project_VP.Properties.Resources.bawls;
+            this.pictureBawlsRight.Location = new System.Drawing.Point(0, 0);
+            this.pictureBawlsRight.Name = "pictureBawlsRight";
+            this.pictureBawlsRight.Size = new System.Drawing.Size(96, 32);
+            this.pictureBawlsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBawlsRight.TabIndex = 0;
+            this.pictureBawlsRight.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,9 +567,21 @@ namespace Project_VP
             this.panelBorderCatRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatRight)).EndInit();
             this.table.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureTableWater)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureTableMeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableCat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTableMeat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTableWater)).EndInit();
+            this.panelBawlsUp.ResumeLayout(false);
+            this.panelBawlsUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsUp)).EndInit();
+            this.panelBawlsDown.ResumeLayout(false);
+            this.panelBawlsDown.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsDown)).EndInit();
+            this.panelBawlsLeft.ResumeLayout(false);
+            this.panelBawlsLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsLeft)).EndInit();
+            this.panelBawlsRight.ResumeLayout(false);
+            this.panelBawlsRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsRight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,6 +629,14 @@ namespace Project_VP
         private System.Windows.Forms.PictureBox pictureTableMeat;
         private System.Windows.Forms.PictureBox pictureTableWater;
         private System.Windows.Forms.ProgressBar progressBarSatiety;
+        private System.Windows.Forms.Panel panelBawlsUp;
+        private System.Windows.Forms.PictureBox pictureBawlsUp;
+        private System.Windows.Forms.Panel panelBawlsDown;
+        private System.Windows.Forms.PictureBox pictureBawlsDown;
+        private System.Windows.Forms.Panel panelBawlsLeft;
+        private System.Windows.Forms.PictureBox pictureBawlsLeft;
+        private System.Windows.Forms.Panel panelBawlsRight;
+        private System.Windows.Forms.PictureBox pictureBawlsRight;
     }
 }
 
