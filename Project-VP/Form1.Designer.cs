@@ -33,18 +33,26 @@ namespace Project_VP
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelBorderBackgroundUp = new System.Windows.Forms.Panel();
             this.panelBackgroundUp = new System.Windows.Forms.Panel();
+            this.panelBawlsUp = new System.Windows.Forms.Panel();
+            this.pictureBawlsUp = new System.Windows.Forms.PictureBox();
             this.panelBorderCatUp = new System.Windows.Forms.Panel();
             this.pictureCatUp = new System.Windows.Forms.PictureBox();
             this.panelBorderBackgroundDown = new System.Windows.Forms.Panel();
             this.panelBackgroundDown = new System.Windows.Forms.Panel();
+            this.panelBawlsDown = new System.Windows.Forms.Panel();
+            this.pictureBawlsDown = new System.Windows.Forms.PictureBox();
             this.panelBorderCatDown = new System.Windows.Forms.Panel();
             this.pictureCatDown = new System.Windows.Forms.PictureBox();
             this.panelBorderBackgroundLeft = new System.Windows.Forms.Panel();
             this.panelBackgroundLeft = new System.Windows.Forms.Panel();
+            this.panelBawlsLeft = new System.Windows.Forms.Panel();
+            this.pictureBawlsLeft = new System.Windows.Forms.PictureBox();
             this.panelBorderCatLeft = new System.Windows.Forms.Panel();
             this.pictureCatLeft = new System.Windows.Forms.PictureBox();
             this.panelBorderBackgroundRight = new System.Windows.Forms.Panel();
             this.panelBackgroundRight = new System.Windows.Forms.Panel();
+            this.panelBawlsRight = new System.Windows.Forms.Panel();
+            this.pictureBawlsRight = new System.Windows.Forms.PictureBox();
             this.panelBorderCatRight = new System.Windows.Forms.Panel();
             this.pictureCatRight = new System.Windows.Forms.PictureBox();
             this.labelSatiety = new System.Windows.Forms.Label();
@@ -63,42 +71,34 @@ namespace Project_VP
             this.progressBarHydration = new System.Windows.Forms.ProgressBar();
             this.buttonGameState = new System.Windows.Forms.Button();
             this.progressBarSatiety = new System.Windows.Forms.ProgressBar();
-            this.panelBawlsUp = new System.Windows.Forms.Panel();
-            this.pictureBawlsUp = new System.Windows.Forms.PictureBox();
-            this.panelBawlsDown = new System.Windows.Forms.Panel();
-            this.pictureBawlsDown = new System.Windows.Forms.PictureBox();
-            this.panelBawlsLeft = new System.Windows.Forms.Panel();
-            this.pictureBawlsLeft = new System.Windows.Forms.PictureBox();
-            this.panelBawlsRight = new System.Windows.Forms.Panel();
-            this.pictureBawlsRight = new System.Windows.Forms.PictureBox();
             this.panelBorderBackgroundUp.SuspendLayout();
             this.panelBackgroundUp.SuspendLayout();
+            this.panelBawlsUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsUp)).BeginInit();
             this.panelBorderCatUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatUp)).BeginInit();
             this.panelBorderBackgroundDown.SuspendLayout();
             this.panelBackgroundDown.SuspendLayout();
+            this.panelBawlsDown.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsDown)).BeginInit();
             this.panelBorderCatDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatDown)).BeginInit();
             this.panelBorderBackgroundLeft.SuspendLayout();
             this.panelBackgroundLeft.SuspendLayout();
+            this.panelBawlsLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsLeft)).BeginInit();
             this.panelBorderCatLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatLeft)).BeginInit();
             this.panelBorderBackgroundRight.SuspendLayout();
             this.panelBackgroundRight.SuspendLayout();
+            this.panelBawlsRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsRight)).BeginInit();
             this.panelBorderCatRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatRight)).BeginInit();
             this.table.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableCat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableMeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableWater)).BeginInit();
-            this.panelBawlsUp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsUp)).BeginInit();
-            this.panelBawlsDown.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsDown)).BeginInit();
-            this.panelBawlsLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsLeft)).BeginInit();
-            this.panelBawlsRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsRight)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBorderBackgroundUp
@@ -120,6 +120,26 @@ namespace Project_VP
             this.panelBackgroundUp.Name = "panelBackgroundUp";
             this.panelBackgroundUp.Size = new System.Drawing.Size(416, 320);
             this.panelBackgroundUp.TabIndex = 0;
+            // 
+            // panelBawlsUp
+            // 
+            this.panelBawlsUp.BackColor = System.Drawing.Color.Transparent;
+            this.panelBawlsUp.Controls.Add(this.pictureBawlsUp);
+            this.panelBawlsUp.Location = new System.Drawing.Point(0, 0);
+            this.panelBawlsUp.Name = "panelBawlsUp";
+            this.panelBawlsUp.Size = new System.Drawing.Size(32, 32);
+            this.panelBawlsUp.TabIndex = 1;
+            this.panelBawlsUp.Visible = false;
+            // 
+            // pictureBawlsUp
+            // 
+            this.pictureBawlsUp.Image = global::Project_VP.Properties.Resources.bawls;
+            this.pictureBawlsUp.Location = new System.Drawing.Point(0, 0);
+            this.pictureBawlsUp.Name = "pictureBawlsUp";
+            this.pictureBawlsUp.Size = new System.Drawing.Size(96, 32);
+            this.pictureBawlsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBawlsUp.TabIndex = 0;
+            this.pictureBawlsUp.TabStop = false;
             // 
             // panelBorderCatUp
             // 
@@ -159,6 +179,26 @@ namespace Project_VP
             this.panelBackgroundDown.Size = new System.Drawing.Size(416, 320);
             this.panelBackgroundDown.TabIndex = 0;
             // 
+            // panelBawlsDown
+            // 
+            this.panelBawlsDown.BackColor = System.Drawing.Color.Transparent;
+            this.panelBawlsDown.Controls.Add(this.pictureBawlsDown);
+            this.panelBawlsDown.Location = new System.Drawing.Point(0, 0);
+            this.panelBawlsDown.Name = "panelBawlsDown";
+            this.panelBawlsDown.Size = new System.Drawing.Size(32, 32);
+            this.panelBawlsDown.TabIndex = 2;
+            this.panelBawlsDown.Visible = false;
+            // 
+            // pictureBawlsDown
+            // 
+            this.pictureBawlsDown.Image = global::Project_VP.Properties.Resources.bawls;
+            this.pictureBawlsDown.Location = new System.Drawing.Point(0, 0);
+            this.pictureBawlsDown.Name = "pictureBawlsDown";
+            this.pictureBawlsDown.Size = new System.Drawing.Size(96, 32);
+            this.pictureBawlsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBawlsDown.TabIndex = 0;
+            this.pictureBawlsDown.TabStop = false;
+            // 
             // panelBorderCatDown
             // 
             this.panelBorderCatDown.Controls.Add(this.pictureCatDown);
@@ -197,6 +237,26 @@ namespace Project_VP
             this.panelBackgroundLeft.Size = new System.Drawing.Size(320, 416);
             this.panelBackgroundLeft.TabIndex = 0;
             // 
+            // panelBawlsLeft
+            // 
+            this.panelBawlsLeft.BackColor = System.Drawing.Color.Transparent;
+            this.panelBawlsLeft.Controls.Add(this.pictureBawlsLeft);
+            this.panelBawlsLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelBawlsLeft.Name = "panelBawlsLeft";
+            this.panelBawlsLeft.Size = new System.Drawing.Size(32, 32);
+            this.panelBawlsLeft.TabIndex = 2;
+            this.panelBawlsLeft.Visible = false;
+            // 
+            // pictureBawlsLeft
+            // 
+            this.pictureBawlsLeft.Image = global::Project_VP.Properties.Resources.bawls;
+            this.pictureBawlsLeft.Location = new System.Drawing.Point(0, 0);
+            this.pictureBawlsLeft.Name = "pictureBawlsLeft";
+            this.pictureBawlsLeft.Size = new System.Drawing.Size(96, 32);
+            this.pictureBawlsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBawlsLeft.TabIndex = 0;
+            this.pictureBawlsLeft.TabStop = false;
+            // 
             // panelBorderCatLeft
             // 
             this.panelBorderCatLeft.Controls.Add(this.pictureCatLeft);
@@ -234,6 +294,26 @@ namespace Project_VP
             this.panelBackgroundRight.Name = "panelBackgroundRight";
             this.panelBackgroundRight.Size = new System.Drawing.Size(320, 416);
             this.panelBackgroundRight.TabIndex = 0;
+            // 
+            // panelBawlsRight
+            // 
+            this.panelBawlsRight.BackColor = System.Drawing.Color.Transparent;
+            this.panelBawlsRight.Controls.Add(this.pictureBawlsRight);
+            this.panelBawlsRight.Location = new System.Drawing.Point(0, 0);
+            this.panelBawlsRight.Name = "panelBawlsRight";
+            this.panelBawlsRight.Size = new System.Drawing.Size(32, 32);
+            this.panelBawlsRight.TabIndex = 2;
+            this.panelBawlsRight.Visible = false;
+            // 
+            // pictureBawlsRight
+            // 
+            this.pictureBawlsRight.Image = global::Project_VP.Properties.Resources.bawls;
+            this.pictureBawlsRight.Location = new System.Drawing.Point(0, 0);
+            this.pictureBawlsRight.Name = "pictureBawlsRight";
+            this.pictureBawlsRight.Size = new System.Drawing.Size(96, 32);
+            this.pictureBawlsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBawlsRight.TabIndex = 0;
+            this.pictureBawlsRight.TabStop = false;
             // 
             // panelBorderCatRight
             // 
@@ -443,86 +523,6 @@ namespace Project_VP
             this.progressBarSatiety.TabIndex = 37;
             this.progressBarSatiety.Value = 12;
             // 
-            // panelBawlsUp
-            // 
-            this.panelBawlsUp.BackColor = System.Drawing.Color.Transparent;
-            this.panelBawlsUp.Controls.Add(this.pictureBawlsUp);
-            this.panelBawlsUp.Location = new System.Drawing.Point(0, 0);
-            this.panelBawlsUp.Name = "panelBawlsUp";
-            this.panelBawlsUp.Size = new System.Drawing.Size(32, 32);
-            this.panelBawlsUp.TabIndex = 1;
-            this.panelBawlsUp.Visible = false;
-            // 
-            // pictureBawlsUp
-            // 
-            this.pictureBawlsUp.Image = global::Project_VP.Properties.Resources.bawls;
-            this.pictureBawlsUp.Location = new System.Drawing.Point(0, 0);
-            this.pictureBawlsUp.Name = "pictureBawlsUp";
-            this.pictureBawlsUp.Size = new System.Drawing.Size(96, 32);
-            this.pictureBawlsUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBawlsUp.TabIndex = 0;
-            this.pictureBawlsUp.TabStop = false;
-            // 
-            // panelBawlsDown
-            // 
-            this.panelBawlsDown.BackColor = System.Drawing.Color.Transparent;
-            this.panelBawlsDown.Controls.Add(this.pictureBawlsDown);
-            this.panelBawlsDown.Location = new System.Drawing.Point(0, 0);
-            this.panelBawlsDown.Name = "panelBawlsDown";
-            this.panelBawlsDown.Size = new System.Drawing.Size(32, 32);
-            this.panelBawlsDown.TabIndex = 2;
-            this.panelBawlsDown.Visible = false;
-            // 
-            // pictureBawlsDown
-            // 
-            this.pictureBawlsDown.Image = global::Project_VP.Properties.Resources.bawls;
-            this.pictureBawlsDown.Location = new System.Drawing.Point(0, 0);
-            this.pictureBawlsDown.Name = "pictureBawlsDown";
-            this.pictureBawlsDown.Size = new System.Drawing.Size(96, 32);
-            this.pictureBawlsDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBawlsDown.TabIndex = 0;
-            this.pictureBawlsDown.TabStop = false;
-            // 
-            // panelBawlsLeft
-            // 
-            this.panelBawlsLeft.BackColor = System.Drawing.Color.Transparent;
-            this.panelBawlsLeft.Controls.Add(this.pictureBawlsLeft);
-            this.panelBawlsLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelBawlsLeft.Name = "panelBawlsLeft";
-            this.panelBawlsLeft.Size = new System.Drawing.Size(32, 32);
-            this.panelBawlsLeft.TabIndex = 2;
-            this.panelBawlsLeft.Visible = false;
-            // 
-            // pictureBawlsLeft
-            // 
-            this.pictureBawlsLeft.Image = global::Project_VP.Properties.Resources.bawls;
-            this.pictureBawlsLeft.Location = new System.Drawing.Point(0, 0);
-            this.pictureBawlsLeft.Name = "pictureBawlsLeft";
-            this.pictureBawlsLeft.Size = new System.Drawing.Size(96, 32);
-            this.pictureBawlsLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBawlsLeft.TabIndex = 0;
-            this.pictureBawlsLeft.TabStop = false;
-            // 
-            // panelBawlsRight
-            // 
-            this.panelBawlsRight.BackColor = System.Drawing.Color.Transparent;
-            this.panelBawlsRight.Controls.Add(this.pictureBawlsRight);
-            this.panelBawlsRight.Location = new System.Drawing.Point(0, 0);
-            this.panelBawlsRight.Name = "panelBawlsRight";
-            this.panelBawlsRight.Size = new System.Drawing.Size(32, 32);
-            this.panelBawlsRight.TabIndex = 2;
-            this.panelBawlsRight.Visible = false;
-            // 
-            // pictureBawlsRight
-            // 
-            this.pictureBawlsRight.Image = global::Project_VP.Properties.Resources.bawls;
-            this.pictureBawlsRight.Location = new System.Drawing.Point(0, 0);
-            this.pictureBawlsRight.Name = "pictureBawlsRight";
-            this.pictureBawlsRight.Size = new System.Drawing.Size(96, 32);
-            this.pictureBawlsRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBawlsRight.TabIndex = 0;
-            this.pictureBawlsRight.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -544,25 +544,38 @@ namespace Project_VP
             this.Controls.Add(this.panelBorderBackgroundUp);
             this.Controls.Add(this.progressBarSatiety);
             this.Controls.Add(this.progressBarHydration);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "My Cat\'s Life";
             this.panelBorderBackgroundUp.ResumeLayout(false);
             this.panelBackgroundUp.ResumeLayout(false);
+            this.panelBawlsUp.ResumeLayout(false);
+            this.panelBawlsUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsUp)).EndInit();
             this.panelBorderCatUp.ResumeLayout(false);
             this.panelBorderCatUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatUp)).EndInit();
             this.panelBorderBackgroundDown.ResumeLayout(false);
             this.panelBackgroundDown.ResumeLayout(false);
+            this.panelBawlsDown.ResumeLayout(false);
+            this.panelBawlsDown.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsDown)).EndInit();
             this.panelBorderCatDown.ResumeLayout(false);
             this.panelBorderCatDown.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatDown)).EndInit();
             this.panelBorderBackgroundLeft.ResumeLayout(false);
             this.panelBackgroundLeft.ResumeLayout(false);
+            this.panelBawlsLeft.ResumeLayout(false);
+            this.panelBawlsLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsLeft)).EndInit();
             this.panelBorderCatLeft.ResumeLayout(false);
             this.panelBorderCatLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatLeft)).EndInit();
             this.panelBorderBackgroundRight.ResumeLayout(false);
             this.panelBackgroundRight.ResumeLayout(false);
+            this.panelBawlsRight.ResumeLayout(false);
+            this.panelBawlsRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsRight)).EndInit();
             this.panelBorderCatRight.ResumeLayout(false);
             this.panelBorderCatRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatRight)).EndInit();
@@ -570,18 +583,6 @@ namespace Project_VP
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableCat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableMeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableWater)).EndInit();
-            this.panelBawlsUp.ResumeLayout(false);
-            this.panelBawlsUp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsUp)).EndInit();
-            this.panelBawlsDown.ResumeLayout(false);
-            this.panelBawlsDown.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsDown)).EndInit();
-            this.panelBawlsLeft.ResumeLayout(false);
-            this.panelBawlsLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsLeft)).EndInit();
-            this.panelBawlsRight.ResumeLayout(false);
-            this.panelBawlsRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsRight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

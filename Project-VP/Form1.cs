@@ -126,6 +126,11 @@ namespace Project_VP
             {
                 pictureTableMeat.Visible = false;
 
+                panelBawlsUp.Visible = false;
+                panelBawlsDown.Visible = false;
+                panelBawlsLeft.Visible = false;
+                panelBawlsRight.Visible = false;
+
                 buttonMeat.Enabled = true;
                 buttonWater.Enabled = true;
 
@@ -137,8 +142,6 @@ namespace Project_VP
 
                 if (progressBarSatiety.Value > progressBarSatiety.Maximum - progressBarSatietyExcess.Maximum)
                 {
-                    //int sub = progressBarSatiety.Maximum - progressBarSatiety.Value;
-                    //progressBarSatietyExcess.Value = (sub > progressBarSatietyExcess.Value) ? (progressBarSatietyExcess.Maximum) : (sub);
                     progressBarSatietyExcess.Value = progressBarSatiety.Value - (progressBarSatiety.Maximum - progressBarSatietyExcess.Maximum);
 
                     progressBarSatietyExcess.SetState((int)ProgressBarColors.Green);
@@ -150,6 +153,11 @@ namespace Project_VP
             {
                 pictureTableWater.Visible = false;
 
+                panelBawlsUp.Visible = false;
+                panelBawlsDown.Visible = false;
+                panelBawlsLeft.Visible = false;
+                panelBawlsRight.Visible = false;
+
                 buttonMeat.Enabled = true;
                 buttonWater.Enabled = true;
 
@@ -160,8 +168,6 @@ namespace Project_VP
 
                 if (progressBarHydration.Value > progressBarHydration.Maximum - progressBarHydrationExcess.Maximum)
                 {
-                    //int sub = progressBarHydration.Maximum - progressBarHydration.Value;
-                    //progressBarHydrationExcess.Value = (sub > progressBarHydrationExcess.Value) ? (progressBarHydrationExcess.Maximum) : (sub);
                     progressBarHydrationExcess.Value = progressBarHydration.Value - (progressBarHydration.Maximum - progressBarHydrationExcess.Maximum);
 
                     progressBarHydrationExcess.SetState((int)ProgressBarColors.Green);
@@ -226,9 +232,11 @@ namespace Project_VP
         {
             timer.Enabled = !timer.Enabled;
 
-            buttonMeat.Enabled = !buttonMeat.Enabled;
-            buttonWater.Enabled = !buttonWater.Enabled;
-
+            if (pictureTableMeat.Visible == false|| pictureTableMeat.Visible == false)
+            {
+                buttonMeat.Enabled = !buttonMeat.Enabled;
+                buttonWater.Enabled = !buttonWater.Enabled;
+            }
             buttonGameState.Text = (timer.Enabled) ? ("Pause") : ("Play");
         }
 
@@ -256,6 +264,23 @@ namespace Project_VP
             buttonWater.Enabled = false;
 
             locationToGo = locationMeatBawl;
+
+            panelBawlsUp.Location = new Point(panelBawlsUp.Width * (locationToGo.Column + 2), panelBawlsUp.Height * (locationToGo.Row + 2));
+            pictureBawlsUp.Location = new Point(panelBawlsUp.Width * (-1), 0);
+
+            panelBawlsDown.Location = new Point(panelBawlsDown.Width * (table.ColumnCount - locationToGo.Column - 1 + 2), panelBawlsDown.Height * (table.RowCount - locationToGo.Row - 1 + 2));
+            pictureBawlsDown.Location = new Point(panelBawlsDown.Width * (-1), 0);
+
+            panelBawlsLeft.Location = new Point(panelBawlsLeft.Width * (table.RowCount - locationToGo.Row - 1 + 2), panelBawlsLeft.Height * (locationToGo.Column + 2));
+            pictureBawlsLeft.Location = new Point(panelBawlsLeft.Width * (-1), 0);
+
+            panelBawlsRight.Location = new Point(panelBawlsRight.Width * (locationToGo.Row + 2), panelBawlsRight.Height * (table.ColumnCount - locationToGo.Column - 1 + 2));
+            pictureBawlsRight.Location = new Point(panelBawlsRight.Width * (-1), 0);
+
+            panelBawlsUp.Visible = true;
+            panelBawlsDown.Visible = true;
+            panelBawlsLeft.Visible = true;
+            panelBawlsRight.Visible = true;
         }
 
         private void buttonWater_Click(object sender, EventArgs e)
@@ -269,6 +294,23 @@ namespace Project_VP
             buttonWater.Enabled = false;
 
             locationToGo = locationWaterBawl;
+
+            panelBawlsUp.Location = new Point(panelBawlsUp.Width * (locationToGo.Column + 2), panelBawlsUp.Height * (locationToGo.Row + 2));
+            pictureBawlsUp.Location = new Point(panelBawlsUp.Width * (-2), 0);
+
+            panelBawlsDown.Location = new Point(panelBawlsDown.Width * (table.ColumnCount - locationToGo.Column - 1 + 2), panelBawlsDown.Height * (table.RowCount - locationToGo.Row - 1 + 2));
+            pictureBawlsDown.Location = new Point(panelBawlsDown.Width * (-2), 0);
+
+            panelBawlsLeft.Location = new Point(panelBawlsLeft.Width * (table.RowCount - locationToGo.Row - 1 + 2), panelBawlsLeft.Height * (locationToGo.Column + 2));
+            pictureBawlsLeft.Location = new Point(panelBawlsLeft.Width * (-2), 0);
+
+            panelBawlsRight.Location = new Point(panelBawlsRight.Width * (locationToGo.Row + 2), panelBawlsRight.Height * (table.ColumnCount - locationToGo.Column - 1 + 2));
+            pictureBawlsRight.Location = new Point(panelBawlsRight.Width * (-2), 0);
+
+            panelBawlsUp.Visible = true;
+            panelBawlsDown.Visible = true;
+            panelBawlsLeft.Visible = true;
+            panelBawlsRight.Visible = true;
         }
     }
 }
