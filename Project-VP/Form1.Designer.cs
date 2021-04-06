@@ -155,6 +155,7 @@ namespace Project_VP
             this.pictureCatUp.Location = new System.Drawing.Point(0, 0);
             this.pictureCatUp.Name = "pictureCatUp";
             this.pictureCatUp.Size = new System.Drawing.Size(384, 256);
+            this.pictureCatUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureCatUp.TabIndex = 0;
             this.pictureCatUp.TabStop = false;
             // 
@@ -212,6 +213,7 @@ namespace Project_VP
             this.pictureCatDown.Location = new System.Drawing.Point(0, -96);
             this.pictureCatDown.Name = "pictureCatDown";
             this.pictureCatDown.Size = new System.Drawing.Size(384, 256);
+            this.pictureCatDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureCatDown.TabIndex = 0;
             this.pictureCatDown.TabStop = false;
             // 
@@ -269,6 +271,7 @@ namespace Project_VP
             this.pictureCatLeft.Location = new System.Drawing.Point(0, -32);
             this.pictureCatLeft.Name = "pictureCatLeft";
             this.pictureCatLeft.Size = new System.Drawing.Size(384, 256);
+            this.pictureCatLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureCatLeft.TabIndex = 0;
             this.pictureCatLeft.TabStop = false;
             // 
@@ -326,6 +329,7 @@ namespace Project_VP
             this.pictureCatRight.Location = new System.Drawing.Point(0, -64);
             this.pictureCatRight.Name = "pictureCatRight";
             this.pictureCatRight.Size = new System.Drawing.Size(384, 256);
+            this.pictureCatRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureCatRight.TabIndex = 0;
             this.pictureCatRight.TabStop = false;
             // 
@@ -430,6 +434,7 @@ namespace Project_VP
             this.pictureTableCat.Location = new System.Drawing.Point(205, 11);
             this.pictureTableCat.Name = "pictureTableCat";
             this.pictureTableCat.Size = new System.Drawing.Size(32, 32);
+            this.pictureTableCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureTableCat.TabIndex = 0;
             this.pictureTableCat.TabStop = false;
             // 
@@ -549,6 +554,7 @@ namespace Project_VP
             this.panelBawlsUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsUp)).EndInit();
             this.panelBorderCatUp.ResumeLayout(false);
+            this.panelBorderCatUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatUp)).EndInit();
             this.panelBorderBackgroundDown.ResumeLayout(false);
             this.panelBackgroundDown.ResumeLayout(false);
@@ -556,6 +562,7 @@ namespace Project_VP
             this.panelBawlsDown.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsDown)).EndInit();
             this.panelBorderCatDown.ResumeLayout(false);
+            this.panelBorderCatDown.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatDown)).EndInit();
             this.panelBorderBackgroundLeft.ResumeLayout(false);
             this.panelBackgroundLeft.ResumeLayout(false);
@@ -563,6 +570,7 @@ namespace Project_VP
             this.panelBawlsLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsLeft)).EndInit();
             this.panelBorderCatLeft.ResumeLayout(false);
+            this.panelBorderCatLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatLeft)).EndInit();
             this.panelBorderBackgroundRight.ResumeLayout(false);
             this.panelBackgroundRight.ResumeLayout(false);
@@ -570,8 +578,10 @@ namespace Project_VP
             this.panelBawlsRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBawlsRight)).EndInit();
             this.panelBorderCatRight.ResumeLayout(false);
+            this.panelBorderCatRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCatRight)).EndInit();
             this.table.ResumeLayout(false);
+            this.table.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableCat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableMeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTableWater)).EndInit();
