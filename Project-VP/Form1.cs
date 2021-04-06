@@ -65,6 +65,11 @@ namespace Project_VP
 
                     panelBackgroundRight.Location = new Point(panelBackgroundRight.Location.X, panelBackgroundRight.Location.Y + height);
                     panelBorderCatRight.Location = new Point(panelBorderCatRight.Location.X, panelBorderCatRight.Location.Y - height);
+
+                    pictureCatUp.Location = new Point(0, -2 * panelBorderCatUp.Height);
+                    pictureCatDown.Location = new Point(0, -1 * panelBorderCatDown.Height);
+                    pictureCatLeft.Location = new Point(0, 0 * panelBorderCatLeft.Height);
+                    pictureCatRight.Location = new Point(0, -3 * panelBorderCatRight.Height);
                 }
                 else
                 {
@@ -81,6 +86,11 @@ namespace Project_VP
 
                     panelBackgroundRight.Location = new Point(panelBackgroundRight.Location.X, panelBackgroundRight.Location.Y - height);
                     panelBorderCatRight.Location = new Point(panelBorderCatRight.Location.X, panelBorderCatRight.Location.Y + height);
+
+                    pictureCatUp.Location = new Point(0, -1 * panelBorderCatUp.Height);
+                    pictureCatDown.Location = new Point(0, -2 * panelBorderCatDown.Height);
+                    pictureCatLeft.Location = new Point(0, -3 * panelBorderCatLeft.Height);
+                    pictureCatRight.Location = new Point(0, 0 * panelBorderCatRight.Height);
                 }
             }
 
@@ -101,6 +111,11 @@ namespace Project_VP
 
                     panelBackgroundRight.Location = new Point(panelBackgroundRight.Location.X - width, panelBackgroundRight.Location.Y);
                     panelBorderCatRight.Location = new Point(panelBorderCatRight.Location.X + width, panelBorderCatRight.Location.Y);
+
+                    pictureCatUp.Location = new Point(0, 0 * panelBorderCatUp.Height);
+                    pictureCatDown.Location = new Point(0, -3 * panelBorderCatDown.Height);
+                    pictureCatLeft.Location = new Point(0, -1 * panelBorderCatLeft.Height);
+                    pictureCatRight.Location = new Point(0, -2 * panelBorderCatRight.Height);
                 }
                 else
                 {
@@ -117,6 +132,11 @@ namespace Project_VP
 
                     panelBackgroundRight.Location = new Point(panelBackgroundRight.Location.X + width, panelBackgroundRight.Location.Y);
                     panelBorderCatRight.Location = new Point(panelBorderCatRight.Location.X - width, panelBorderCatRight.Location.Y);
+
+                    pictureCatUp.Location = new Point(0, -3 * panelBorderCatUp.Height);
+                    pictureCatDown.Location = new Point(0, 0 * panelBorderCatDown.Height);
+                    pictureCatLeft.Location = new Point(0, -2 * panelBorderCatLeft.Height);
+                    pictureCatRight.Location = new Point(0, -1 * panelBorderCatRight.Height);
                 }
             }
 
